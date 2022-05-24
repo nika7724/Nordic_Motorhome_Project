@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>RENTAL</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>RENTALS</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>RentalID</th>
+        <!--<th>CustomerID</th>-->
+        <th>MotorhomeName</th>
+        <th>StartDate</th>
+        <th>EndDate</th>
+        <th>Price</th>
+        <th>Location</th>
+        <!--<th>Accessory</th>
+        <th>RepairRequirement</th>
+        <th>Total</th>-->
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="rental : ${rentals}">
+        <td th:text="${rental.rental_id}"/>
+        <!--<td th:text="${rental.customerID}"/>-->
+        <td th:text="${rental.motorho_id}"/>
+        <td th:text="${rental.start_date}"/>
+        <td th:text="${rental.end_date}"/>
+        <td th:text="${rental.price_id}"/>
+        <td th:text="${rental.location_id}"/>
+
+        <!--<td id="btn-column">
+            <a th:href="@{'/viewMotorho/'+${motorhome.motorhoID}}">View</a>
+            <a th:href="@{'/deleteMotorho/'+${motorhome.motorhoID}}">Delete</a>
+            <a th:href="@{'/editMotorho/'+${motorhome.motorhoID}}">Edit</a>
+        </td>-->
+
+        <!--<a th:href="@{'/viewMotorho/'+${motorhome.motorhoID}}">
+            <button class="btn-view" id="btn-view">View</button>
+        </a>
+        <a th:href="@{'/delete/'+${motorhome.motorhoID}}">
+            <button class="btn-delete" id="btn-delete">Delete</button>
+        </a>
+       <a th:href="@{'/editMotorho/'+${motorhome.motorhoID}}">
+            <button class="btn-edit" id="btn-edit">Edit</button>
+        </a>-->
+
+    </tr>
+    </tbody>
+</table>
+
+<button onclick="location.href='addRental'">Register</button>
+<!--<button onclick="location.href='searchMotorho'">SEARCH</button>-->
+
+</body>
+</html>
