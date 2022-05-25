@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>EditPage</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}"/>
+
+</head>
+<body>
+<h1>EDIT MOTORHOMES</h1>
+
+<form action="/editMotorho" method = "post">
+    <label for="motorho_id">MotorhomeID</label><br>
+    <input type="text" id="motorho_id" name="motorho_id" th:value="${motorhome.motorho_id}" readonly><br>
+    <label for="motorho_name">Motorhome Name</label><br>
+    <input type="text" id="motorho_name" name="motorho_name" th:value="${motorhome.motorho_name}" autofocus><br>
+    <label for="brand_name">Brand Name</label><br>
+    <input type="text" id="brand_name" name="brand_name" th:value="${motorhome.brand_name}" autofocus><br>
+    <label for="size">Size</label><br>
+    <input type="text" id="size" name="size" th:value="${motorhome.size}" autofocus><br>
+    <label for="year">Year</label><br>
+    <input type="text" id="year" name="year" th:value="${motorhome.year}" autofocus><br>
+    <label for="season_id">Season_ID</label><br>
+    <input type="text" id="season_id" name="season_id" th:value="${motorhome.season_id}" autofocus><br>
+    <label for="availability">Availability</label><br>
+    <input type="text" id="availability" name="availability" th:value="${motorhome.availability}" autofocus><br>
+    <input type="submit" value="Save" style="margin-top:1%">
+
+</form>
+</body>
+</html>

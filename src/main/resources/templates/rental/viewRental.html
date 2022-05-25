@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Rental Details</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}"/>
+</head>
+<body>
+<h1>RENTAL DETAILS</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>RentalID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>MotorhomeName</th>
+        <th>StartDate</th>
+        <th>EndDate</th>
+        <th>Price</th>
+        <th>Location</th>
+        <!--<th>Accessory</th>-->
+        <!--<th>Repair</th>-->
+        <th>Total</th>
+
+
+    </tr>
+    </thead>>
+
+    <tbody>
+    <tr>
+        <td th:text="${rental.rental_id}"/>
+        <td th:text="${rental.first_name}"/>
+        <td th:text="${rental.last_name}"/>
+        <td th:text="${rental.motorho_name}"/>
+        <td th:text="${rental.start_date}"/>
+        <td th:text="${rental.end_date}"/>
+        <td th:text="${rental.price}"/>
+        <td th:text="${rental.location_name}"/>
+        <td th:text="${rental.total}"/>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
