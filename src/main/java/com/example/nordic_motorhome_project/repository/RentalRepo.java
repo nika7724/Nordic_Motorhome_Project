@@ -32,7 +32,7 @@ public class RentalRepo {
     }
 
     public Rental findRentalById(int id) {
-        String sql = "SELECT rental_id, c.first_name, c.last_name, m.motorho_name, start_date, end_date, s.price, l.location_name, " +
+        String sql = "SELECT rental_id, c.id, c.first_name, c.last_name, m.motorho_id, m.motorho_name, start_date, end_date, s.season_id, s.price, l.location_id, l.location_name, " +
                 "datediff(end_date, start_date) * s.price AS total FROM rentals r JOIN customers c ON r.id = c.id " +
                 "JOIN motorhomes m ON r.motorho_id = m.motorho_id " +
                 "JOIN season_prices s ON r.season_id = s.season_id JOIN locations l ON r.location_id = l.location_id WHERE rental_id =?";
@@ -47,12 +47,18 @@ public class RentalRepo {
     }
 
     public Rental updateRental(int id, Rental rental) {
-        String sql = "UPDATE rentals SET id =?, motorho_id =?, start_date=?, end_date=?, season_id=?, " +
-                "season_id =?, location_id=? WHERE rental_id =?";
-        jdbcTemplate.update(sql, rental.getRental_id(), rental.getId(), rental.getMotorho_id(),
-                rental.getStart_date(), rental.getEnd_date(), rental.getSeason_id(), rental.getLocation_id());
+        String sql = "UPDATE rentals SET motorho_id =?, start_date=?, end_date=?, season_id=?, " +
+          "season_id =?, location_id=? WHERE rental_id =? id =? ";
+        jdbcTemplate.update(sql, rental.getMotorho_id(), rental.getStart_date(), rental.getEnd_date(),
+                rental.getSeason_id(), rental.getLocation_id(), rental.getRental_id(), rental.getId());
         return null;
     }
+       /* String sql = "UPDATE rentals SET first_name=?, last_name=?, motorho_id =?, motorho_name=?, start_date=?, end_date=?, season_id=?, " +
+                "season_id =?, price=?, location_id=?, location_name=? WHERE rental_id =? id =? ";
+        jdbcTemplate.update(sql, rental.getId(), rental.getFirst_name(), rental.getLast_name(), rental.getMotorho_id(), rental.getMotorho_name(), rental.getStart_date(), rental.getEnd_date(),
+                rental.getSeason_id(), rental.getPrice(), rental.getLocation_id(), rental.getLocation_name(),rental.getRental_id());
+        return null;
+    }*/
 }
 
 
