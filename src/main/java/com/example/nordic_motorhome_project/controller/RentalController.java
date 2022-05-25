@@ -49,13 +49,12 @@ public class RentalController {
     @GetMapping("/editRental/{id}")
     public String edit(@PathVariable("id") int id, Model model) {
         model.addAttribute("rental", rentalServices.findRentalById(id));
-        System.out.println(rentalServices.findRentalById(id));
         return "rental/editRental";
     }
 
     @PostMapping ("/editRental")
     public String editMotorho(@ModelAttribute Rental rental) {
-        rentalServices.updateRental(rental.getMotorho_id(), rental);
+        rentalServices.updateRental(rental.getRental_id(), rental);
         return "redirect:/rental";
     }
 
