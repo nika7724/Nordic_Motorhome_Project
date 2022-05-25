@@ -18,4 +18,24 @@ public class RentalServices {
         return rentalRepo.fetchAll();
     }
 
+    public Rental addRental(Rental rental) {
+
+        return rentalRepo.addRental(rental);
+    }
+
+    public Rental findRentalById(int id) {
+
+        return rentalRepo.findRentalById(id);
+    }
+
+    public Boolean deleteRental (int id) {
+
+        return rentalRepo.deleteRental(id);
+    }
+
+    public Rental updateRental(int id, Rental rental) {
+
+        return rentalRepo.updateRental(id, rental);
+    }
+
 }
