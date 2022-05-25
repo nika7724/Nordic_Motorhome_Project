@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Information</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div><h2>Customer Information:</h2></div>
+    <div class="m-2">
+        <a class="h3" th:href="@{/customers/new}">Register New Customer</a>
+    </div>
+    <div th:if="${message}" class="alert alert-success text-center">
+        [[${message}]]
+
+    </div>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="customer: ${listCustomers}">
+                <tr>
+                    <td>[[${customer.id}]]</td>
+                    <td>[[${customer.firstName}]]</td>
+                    <td>[[${customer.lastName}]]</td>
+                    <td>[[${customer.phoneNumber}]]</td>
+                    <td>
+                        <a class="h4 mr-3" th:href="@{'/customers/update/' + ${customer.id}}">Update</a>
+                        <a class="h4" th:href="@{'/customers/delete/' + ${customer.id}}">Delete</a>
+                    </td>
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
