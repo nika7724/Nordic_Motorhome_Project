@@ -13,32 +13,45 @@
     <tr>
         <th>RentalID</th>
         <!--<th>CustomerID</th>-->
+        <th>FirstName</th>
+        <th>LastName</th>
+        <!--<th>MotorhomeID</th>-->
         <th>MotorhomeName</th>
         <th>StartDate</th>
         <th>EndDate</th>
-        <th>Price</th>
+        <!--<th>SeasonID</th>-->
+        <!--<th>Price</th>-->
+        <!--<th>LocationID</th>-->
         <th>Location</th>
-        <!--<th>Accessory</th>
-        <th>RepairRequirement</th>
-        <th>Total</th>-->
+        <!--<th>Accessory</th>-->
+        <!--<th>RepairRequirement</th>-->
+        <!--<th>Total</th>-->
+        <th>Option</th>
+
     </tr>
     </thead>
 
     <tbody>
     <tr th:each="rental : ${rentals}">
         <td th:text="${rental.rental_id}"/>
-        <!--<td th:text="${rental.customerID}"/>-->
-        <td th:text="${rental.motorho_id}"/>
+        <!--<td th:text="${rental.id}"/>-->
+        <td th:text="${rental.first_name}"/>
+        <td th:text="${rental.last_name}"/>
+        <!--<td th:text="${rental.motorho_id}"/>-->
+        <td th:text="${rental.motorho_name}"/>
         <td th:text="${rental.start_date}"/>
         <td th:text="${rental.end_date}"/>
-        <td th:text="${rental.price_id}"/>
-        <td th:text="${rental.location_id}"/>
+        <!--<td th:text="${rental.season_id}"/>-->
+        <!--<td th:text="${rental.price}"/>-->
+        <!--<td th:text="${rental.location_id}"/>-->
+        <td th:text="${rental.location_name}"/>
+        <!--<td th:text="${rental.total}"/>-->
 
-        <!--<td id="btn-column">
-            <a th:href="@{'/viewMotorho/'+${motorhome.motorhoID}}">View</a>
-            <a th:href="@{'/deleteMotorho/'+${motorhome.motorhoID}}">Delete</a>
-            <a th:href="@{'/editMotorho/'+${motorhome.motorhoID}}">Edit</a>
-        </td>-->
+        <td id="btn-column">
+            <a th:href="@{'/viewRental/'+${rental.rental_id}}">View</a>
+            <a th:href="@{'/deleteRental/'+${rental.rental_id}}">Delete</a>
+            <a th:href="@{'/editRental/'+${rental.rental_id}}">Edit</a>
+        </td>
 
         <!--<a th:href="@{'/viewMotorho/'+${motorhome.motorhoID}}">
             <button class="btn-view" id="btn-view">View</button>

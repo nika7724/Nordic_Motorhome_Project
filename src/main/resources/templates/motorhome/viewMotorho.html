@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Motorhome Details</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}"/>
+</head>
+<body>
+<h1>MOTORHOME DETAILS</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>MotorhomeID</th>
+        <th>MotorhomeName</th>
+        <th>BrandName</th>
+        <th>Size</th>
+        <th>Year</th>
+        <th>Price_Peak</th>
+        <th>Price_Middle</th>
+        <th>Price_Low</th>
+        <th>Availability</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td th:text="${motorhome.motorho_id}"/>
+        <td th:text="${motorhome.motorho_name}"/>
+        <td th:text="${motorhome.brand_name}"/>
+        <td th:text="${motorhome.size}"/>
+        <td th:text="${motorhome.year}"/>
+        <td th:text="${motorhome.price_peak}"/>
+        <td th:text="${motorhome.price_middle}"/>
+        <td th:text="${motorhome.price_low}"/>
+        <td th:text="${motorhome.availability}"/>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
