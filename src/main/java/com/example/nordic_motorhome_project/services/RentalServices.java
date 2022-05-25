@@ -1,6 +1,5 @@
 package com.example.nordic_motorhome_project.services;
 
-import com.example.nordic_motorhome_project.model.Motorhome;
 import com.example.nordic_motorhome_project.model.Rental;
 import com.example.nordic_motorhome_project.repository.RentalRepo;
 import org.springframework.beans.factory.annotation.Autowired;

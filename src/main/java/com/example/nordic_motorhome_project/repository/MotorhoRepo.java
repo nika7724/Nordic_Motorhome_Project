@@ -39,8 +39,7 @@ public Boolean deleteMotorho (int id) {
 }
 
     public Motorhome updateMotorho(int id, Motorhome motorho) {
-        String sql ="UPDATE motorhomes SET motorho_name =?, brand_name=?, size=?, year=?, " +
-                "season_id =?, availability=? WHERE motorho_id =?";
+        String sql ="UPDATE motorhomes SET motorho_name =?, brand_name=?, size=?, year=?, season_id =?, availability=? WHERE motorho_id =?";
         jdbcTemplate.update(sql, motorho.getMotorho_name(),motorho.getBrand_name(), motorho.getSize(),
                 motorho.getYear(),motorho.getSeason_id(),
                 motorho.getAvailability(), motorho.getMotorho_id());

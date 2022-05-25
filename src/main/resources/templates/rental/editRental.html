@@ -12,17 +12,15 @@
 <form action="/editRental" method = "post">
     <label for="rental_id">RentalID</label><br>
     <input type="text" id="rental_id" name="rental_id" th:value="${rental.rental_id}" readonly><br>
-    <label for="id">CustomerID</label><br>
-    <input type="text" id="id" name="id" th:value="${rental.id}" readonly><br>
     <label for="motorho_id">MotorhomeID</label><br>
     <input type="text" id="motorho_id" name="motorho_id" th:value="${rental.motorho_id}" autofocus><br>
     <label for="start_date">StartDate</label><br>
-    <input type="text" id="start_date" name="start_date" th:value="${rental.start_date}" autofocus><br>
+    <input type="date" id="start_date" name="start_date" th:value="${rental.start_date}" autofocus><br>
     <label for="end_date">EndDate</label><br>
-    <input type="text" id="end_date" name="end_date" th:value="${rental.end_date}" autofocus><br>
+    <input type="date" id="end_date" name="end_date" th:value="${rental.end_date}" autofocus><br>
     <label for="season_id">Season_ID</label><br>
     <input type="text" id="season_id" name="season_id" th:value="${rental.season_id}" autofocus><br>
-    <label for="location_id">Location</label><br>
+    <label for="location_id">Location_ID</label><br>
     <input type="text" id="location_id" name="location_id" th:value="${rental.location_id}" autofocus><br>
     <input type="submit" value="Save" style="margin-top:1%">
 

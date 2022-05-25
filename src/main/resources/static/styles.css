@@ -33,7 +33,7 @@ td {
    }
 
 form {
-    height: 650px;
+    height: 900px;
     margin-top: 1%;
     text-align: center;
     padding: 7px;
@@ -47,4 +47,29 @@ input {
     margin-bottom: 0.5%;
 }
 
+button {
+    border: 1px solid white;
+    margin:auto;
+    margin-top: 4%;
+    width: 150px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Calibri light", serif;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
 
+button:hover{
+    cursor: pointer;
+    box-shadow: 7px 7px 7px darkgray;
+}
+
+input {
+    padding: 7px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 1px;
+}

@@ -1,5 +1,7 @@
 package com.example.nordic_motorhome_project.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
@@ -13,7 +15,9 @@ public class Rental {
     private String last_name;
     private int motorho_id;
     private String motorho_name;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date start_date;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date end_date;
     private int season_id;
     private double price;
@@ -132,22 +136,6 @@ public class Rental {
         this.total = total;
     }
 
-    @Override
-    public String toString() {
-        return "Rental{" +
-                "rental_id=" + rental_id +
-                ", id=" + id +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                ", motorho_id=" + motorho_id +
-                ", motorho_name='" + motorho_name + '\'' +
-                ", start_date=" + start_date +
-                ", end_date=" + end_date +
-                ", season_id=" + season_id +
-                ", price=" + price +
-                ", location_id=" + location_id +
-                ", location_name='" + location_name + '\'' +
-                ", total=" + total +
-                '}';
-    }
+
 }
+
