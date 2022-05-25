@@ -131,4 +131,23 @@ public class Rental {
     public void setTotal(double total) {
         this.total = total;
     }
+
+    @Override
+    public String toString() {
+        return "Rental{" +
+                "rental_id=" + rental_id +
+                ", id=" + id +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                ", motorho_id=" + motorho_id +
+                ", motorho_name='" + motorho_name + '\'' +
+                ", start_date=" + start_date +
+                ", end_date=" + end_date +
+                ", season_id=" + season_id +
+                ", price=" + price +
+                ", location_id=" + location_id +
+                ", location_name='" + location_name + '\'' +
+                ", total=" + total +
+                '}';
+    }
 }

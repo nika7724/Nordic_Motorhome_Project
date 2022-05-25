@@ -49,6 +49,7 @@ public class RentalController {
     @GetMapping("/editRental/{id}")
     public String edit(@PathVariable("id") int id, Model model) {
         model.addAttribute("rental", rentalServices.findRentalById(id));
+        System.out.println(rentalServices.findRentalById(id));
         return "rental/editRental";
     }
 
