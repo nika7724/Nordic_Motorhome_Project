@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.w3.org/1999/xhtml">
@@ -8,15 +8,16 @@
 <body>
 <h1>EXTRA CHARGE</h1>
 
-<form action ="/addCharge" method="post">
+<form action="/chargeRental" method = "post">
 
-    <input type ="text" name="accessory" placeholder="Accsessory"><br>
-    <input type ="text" name="fuel_level" placeholder="Fuel_Level"><br>
-    <input type ="text" name="speed_meter" placeholder="Speed_Meter"><br>
-    <input type="submit" value="Register" style="margin-top:1%">
-
-
+<label for="rental_id">Rental_ID</label><br>
+<input type="text" id="rental_id" name="rental_id" th:value="${rental.rental_id}" readonly><br>
+<label for="fuel_id">Fuel_ID</label><br>
+<input type="text" id="fuel_id" name="fuel_id" th:value="${rental.fuel_id}" autofocus><br>
+<label for="speed_meter_id">Extra Kilometer</label><br>
+<input type="text" id="speed_meter_id" name="speed_meter_id" th:value="${rental.speed_meter}" autofocus><br>
+<input type="submit" value="Save" style="margin-top:1%">
 </form>
 
 </body>
-</html>-->
+</html>

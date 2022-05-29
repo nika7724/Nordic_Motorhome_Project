@@ -37,4 +37,9 @@ public class RentalServices {
         return rentalRepo.updateRental(id, rental);
     }
 
+    public Rental chargeRental(int id, Rental rental) {
+
+        return rentalRepo.chargeRental(id, rental);
+    }
+
 }

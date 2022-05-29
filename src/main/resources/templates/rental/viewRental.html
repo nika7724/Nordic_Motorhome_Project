@@ -12,14 +12,15 @@
     <thead>
     <tr>
         <th>RentalID</th>
-        <th>FirstName</th>
-        <th>LastName</th>
-        <th>MotorhomeName</th>
-        <th>StartDate</th>
-        <th>EndDate</th>
-        <th>Price</th>
+        <th>Start_Date</th>
+        <th>End_Date</th>
+        <th>Rental_Fee</th>
         <th>Location</th>
-        <!--<th>Accessory</th>-->
+        <th>Transfer_Fee</th>
+        <th>Accessory</th>
+        <th>Accessory_Fee</th>
+        <th>Fuel_Fee</th>
+        <th>Speed_Meter_Fee</th>
         <!--<th>Repair</th>-->
         <th>Total</th>
 
@@ -30,13 +31,15 @@
     <tbody>
     <tr>
         <td th:text="${rental.rental_id}"/>
-        <td th:text="${rental.first_name}"/>
-        <td th:text="${rental.last_name}"/>
-        <td th:text="${rental.motorho_name}"/>
         <td th:text="${rental.start_date}"/>
         <td th:text="${rental.end_date}"/>
         <td th:text="${rental.price}"/>
         <td th:text="${rental.location_name}"/>
+        <td th:text="${rental.location_price}"/>
+        <td th:text="${rental.item_name}"/>
+        <td th:text="${rental.item_price}"/>
+        <td th:text="${rental.fuel_fee}"/>
+        <td th:text="${rental.speed_meter_fee}"/>
         <td th:text="${rental.total}"/>
     </tr>
     </tbody>

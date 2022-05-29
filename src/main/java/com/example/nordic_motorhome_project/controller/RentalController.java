@@ -60,15 +60,17 @@ public class RentalController {
         return "redirect:/rental";
     }
 
-       }
-    /*@GetMapping("/chargeRental")
-    public String charge() {
+    @GetMapping("/chargeRental/{id}")
+    public String chargeR(@PathVariable("id") int id, Model model) {
+        model.addAttribute("rental", rentalServices.findRentalById(id));
         return "rental/chargeRental";
     }
 
     @PostMapping("/chargeRental")
     public String chargeRental(@ModelAttribute Rental rental) {
-        rentalServices.chargeRental(rental);
+        rentalServices.chargeRental(rental.getRental_id(), rental);
         return "redirect:/rental";
-    }*/
+    }
 
+
+}
