@@ -27,12 +27,13 @@ public class Rental {
     private int item_id;
     private String item_name;
     private double item_price;
-    private double total;
     private int fuel_id;
     private double fuel_fee;
     private int speed_meter_id;
     private int speed_meter;
     private double speed_meter_fee;
+    private String availability;
+    private double total;
 
     public Rental() {
 
@@ -126,8 +127,11 @@ public class Rental {
         return speed_meter_fee;
     }
 
+    public String getAvailability() {
+        return availability;
+    }
 
-    //setter
+//setter
 
     public void setRental_id(int rental_id) {
         this.rental_id = rental_id;
@@ -217,4 +221,7 @@ public class Rental {
         this.speed_meter_fee = speed_meter_fee;
     }
 
+    public void setAvailability(String availability) {
+        this.availability = availability;
+    }
 }

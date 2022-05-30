@@ -15,7 +15,6 @@ public class RentalRepo {
     private JdbcTemplate jdbcTemplate;
 
     public List<Rental> fetchAll() {
-        /*String sql ="SELECT* FROM rentals";*/
         String sql = "SELECT rental_id, c.id, c.first_name, c.last_name, m.motorho_id, m.motorho_name, start_date, end_date, s.season_id, datediff(end_date, start_date) * s.price AS price, " +
                 "l.location_id, l.location_name, datediff(end_date, start_date) * s.price + l.location_price AS total FROM rentals r JOIN customers c ON r.id = c.id JOIN motorhomes m ON r.motorho_id = m.motorho_id JOIN season_prices s " +
                 "ON r.season_id = s.season_id JOIN locations l ON r.location_id = l.location_id";
@@ -33,7 +32,7 @@ public class RentalRepo {
     public Rental findRentalById(int id) {
         String sql = "SELECT rental_id, c.id, c.first_name, c.last_name, m.motorho_id, " +
                 "m.motorho_name, start_date, end_date, s.season_id, datediff(end_date, start_date) * s.price AS price, l.location_id, " +
-                "l.location_name, l.location_price, a.item_id, a.item_name, a.item_price, f.fuel_id, f.fuel_fee, p.speed_meter_id, p.speed_meter, p.speed_meter_fee," +
+                "l.location_name, l.location_price, a.item_id, a.item_name, a.item_price, f.fuel_id, f.fuel_fee, p.speed_meter_id, p.speed_meter, p.speed_meter_fee, m.availability," +
                 "datediff(end_date, start_date) * s.price +(l.location_price + a.item_price + f.fuel_fee + p.speed_meter_fee) AS total " +
                 "FROM rentals r JOIN customers c ON r.id = c.id " +
                 "JOIN motorhomes m ON r.motorho_id = m.motorho_id " +
