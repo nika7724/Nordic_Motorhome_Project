@@ -113,5 +113,21 @@ public class Motorhome {
     public void setAvailability(String availability) {
         this.availability = availability;
     }
+
+    @Override
+    public String toString() {
+        return "Motorhome{" +
+                "motorho_id=" + motorho_id +
+                ", motorho_name='" + motorho_name + '\'' +
+                ", brand_name='" + brand_name + '\'' +
+                ", size='" + size + '\'' +
+                ", year=" + year +
+                ", season_id=" + season_id +
+                ", price_peak=" + price_peak +
+                ", price_middle=" + price_middle +
+                ", price_low=" + price_low +
+                ", availability='" + availability + '\'' +
+                '}';
+    }
 }
 

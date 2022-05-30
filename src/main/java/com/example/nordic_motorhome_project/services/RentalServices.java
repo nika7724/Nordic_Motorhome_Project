@@ -1,6 +1,5 @@
 package com.example.nordic_motorhome_project.services;
 
-import com.example.nordic_motorhome_project.model.Motorhome;
 import com.example.nordic_motorhome_project.model.Rental;
 import com.example.nordic_motorhome_project.repository.RentalRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +35,11 @@ public class RentalServices {
     public Rental updateRental(int id, Rental rental) {
 
         return rentalRepo.updateRental(id, rental);
+    }
+
+    public Rental chargeRental(int id, Rental rental) {
+
+        return rentalRepo.chargeRental(id, rental);
     }
 
 }

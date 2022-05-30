@@ -26,7 +26,7 @@ public class RentalController {
     }
 
     @GetMapping("/addRental")
-    public String add() {
+    public String addRentalget() {
         return "rental/addRental";
     }
 
@@ -35,11 +35,13 @@ public class RentalController {
         rentalServices.addRental(rental);
         return "redirect:/rental";
     }
-    @GetMapping ("/viewRental/{id}")
+
+    @GetMapping("/viewRental/{id}")
     public String viewRental(@PathVariable("id") int id, Model model) {
         model.addAttribute("rental", rentalServices.findRentalById(id));
         return "rental/viewRental";
     }
+
     @GetMapping("/deleteRental/{id}")
     public String deleteRental(@PathVariable("id") int id) {
         boolean deleteRental = rentalServices.deleteRental(id);
@@ -47,15 +49,28 @@ public class RentalController {
     }
 
     @GetMapping("/editRental/{id}")
-    public String edit(@PathVariable("id") int id, Model model) {
+    public String editR(@PathVariable("id") int id, Model model) {
         model.addAttribute("rental", rentalServices.findRentalById(id));
         return "rental/editRental";
     }
 
-    @PostMapping ("/editRental")
-    public String editMotorho(@ModelAttribute Rental rental) {
+    @PostMapping("/editRental")
+    public String editRental(@ModelAttribute Rental rental) {
         rentalServices.updateRental(rental.getRental_id(), rental);
         return "redirect:/rental";
     }
+
+    @GetMapping("/chargeRental/{id}")
+    public String chargeR(@PathVariable("id") int id, Model model) {
+        model.addAttribute("rental", rentalServices.findRentalById(id));
+        return "rental/chargeRental";
+    }
+
+    @PostMapping("/chargeRental")
+    public String chargeRental(@ModelAttribute Rental rental) {
+        rentalServices.chargeRental(rental.getRental_id(), rental);
+        return "redirect:/rental";
+    }
+
 
 }

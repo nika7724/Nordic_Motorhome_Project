@@ -1,5 +1,7 @@
 package com.example.nordic_motorhome_project.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
@@ -13,19 +15,28 @@ public class Rental {
     private String last_name;
     private int motorho_id;
     private String motorho_name;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date start_date;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date end_date;
     private int season_id;
     private double price;
     private int location_id;
     private String location_name;
+    private double location_price;
+    private int item_id;
+    private String item_name;
+    private double item_price;
     private double total;
-
+    private int fuel_id;
+    private double fuel_fee;
+    private int speed_meter_id;
+    private int speed_meter;
+    private double speed_meter_fee;
 
     public Rental() {
 
     }
-//getter
 
     public int getRental_id() {
         return rental_id;
@@ -75,11 +86,49 @@ public class Rental {
         return location_name;
     }
 
+    public double getLocation_price() {
+        return location_price;
+    }
+
+    public int getItem_id() {
+        return item_id;
+    }
+
+    public String getItem_name() {
+        return item_name;
+    }
+
+    public double getItem_price() {
+        return item_price;
+    }
+
     public double getTotal() {
         return total;
     }
 
-    //set
+    public int getFuel_id() {
+        return fuel_id;
+    }
+
+       public double getFuel_fee() {
+        return fuel_fee;
+    }
+
+    public int getSpeed_meter_id() {
+        return speed_meter_id;
+    }
+
+    public int getSpeed_meter() {
+        return speed_meter;
+    }
+
+    public double getSpeed_meter_fee() {
+        return speed_meter_fee;
+    }
+
+
+    //setter
+
     public void setRental_id(int rental_id) {
         this.rental_id = rental_id;
     }
@@ -128,26 +177,44 @@ public class Rental {
         this.location_name = location_name;
     }
 
+    public void setLocation_price(double location_price) {
+        this.location_price = location_price;
+    }
+
+    public void setItem_id(int item_id) {
+        this.item_id = item_id;
+    }
+
+    public void setItem_name(String item_name) {
+        this.item_name = item_name;
+    }
+
+    public void setItem_price(double item_price) {
+        this.item_price = item_price;
+    }
+
     public void setTotal(double total) {
         this.total = total;
     }
 
-    @Override
-    public String toString() {
-        return "Rental{" +
-                "rental_id=" + rental_id +
-                ", id=" + id +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                ", motorho_id=" + motorho_id +
-                ", motorho_name='" + motorho_name + '\'' +
-                ", start_date=" + start_date +
-                ", end_date=" + end_date +
-                ", season_id=" + season_id +
-                ", price=" + price +
-                ", location_id=" + location_id +
-                ", location_name='" + location_name + '\'' +
-                ", total=" + total +
-                '}';
+    public void setFuel_id(int fuel_id) {
+        this.fuel_id = fuel_id;
     }
+
+       public void setFuel_fee(double fuel_fee) {
+        this.fuel_fee = fuel_fee;
+    }
+
+    public void setSpeed_meter_id(int speed_meter_id) {
+        this.speed_meter_id = speed_meter_id;
+    }
+
+    public void setSpeed_meter(int speed_meter) {
+        this.speed_meter = speed_meter;
+    }
+
+    public void setSpeed_meter_fee(double speed_meter_fee) {
+        this.speed_meter_fee = speed_meter_fee;
+    }
+
 }
