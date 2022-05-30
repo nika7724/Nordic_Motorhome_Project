@@ -37,15 +37,10 @@
         <!--<td th:text="${rental.id}"/>-->
         <td th:text="${rental.first_name}"/>
         <td th:text="${rental.last_name}"/>
-       <!--<td th:text="${rental.motorho_id}"/>-->
         <td th:text="${rental.motorho_name}"/>
         <td th:text="${rental.start_date}"/>
         <td th:text="${rental.end_date}"/>
-        <!--<td th:text="${rental.season_id}"/>-->
-        <!--<td th:text="${rental.price}"/>-->
-        <!--<td th:text="${rental.location_id}"/>-->
         <td th:text="${rental.location_name}"/>
-        <!--<td th:text="${rental.total}"/>-->
 
         <td id="btn-column">
             <a th:href="@{'/viewRental/'+${rental.rental_id}}">View</a>
@@ -54,15 +49,7 @@
             <a th:href="@{'/chargeRental/'+${rental.rental_id}}">Charge</a>
         </td>
 
-        <!--<a th:href="@{'/viewMotorho/'+${motorhome.motorhoID}}">
-            <button class="btn-view" id="btn-view">View</button>
-        </a>
-        <a th:href="@{'/delete/'+${motorhome.motorhoID}}">
-            <button class="btn-delete" id="btn-delete">Delete</button>
-        </a>
-       <a th:href="@{'/editMotorho/'+${motorhome.motorhoID}}">
-            <button class="btn-edit" id="btn-edit">Edit</button>
-        </a>-->
+
 
     </tr>
     </tbody>
@@ -70,7 +57,6 @@
 
 <button onclick="location.href='addRental'">Register</button>
 
-<!--<button onclick="location.href='searchMotorho'">SEARCH</button>-->
 
 </body>
 </html>
