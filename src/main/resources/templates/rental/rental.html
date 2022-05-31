@@ -12,20 +12,12 @@
     <thead>
     <tr>
         <th>RentalID</th>
-        <!--<th>CustomerID</th>-->
         <th>FirstName</th>
         <th>LastName</th>
-       <!--<th>MotorhomeID</th>-->
         <th>MotorhomeName</th>
         <th>StartDate</th>
         <th>EndDate</th>
-        <!--<th>SeasonID</th>-->
-        <!--<th>Price</th>-->
-        <!--<th>LocationID</th>-->
         <th>Location</th>
-        <!--<th>Accessory</th>-->
-        <!--<th>RepairRequirement</th>-->
-        <!--<th>Total</th>-->
         <th>Option</th>
 
     </tr>
@@ -34,7 +26,6 @@
     <tbody>
     <tr th:each="rental : ${rentals}">
         <td th:text="${rental.rental_id}"/>
-        <!--<td th:text="${rental.id}"/>-->
         <td th:text="${rental.first_name}"/>
         <td th:text="${rental.last_name}"/>
         <td th:text="${rental.motorho_name}"/>
