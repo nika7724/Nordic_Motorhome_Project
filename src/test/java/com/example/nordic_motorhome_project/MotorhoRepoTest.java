@@ -26,7 +26,7 @@ public class MotorhoRepoTest {
         motorhome.setSeason_id(1);
         motorhome.setAvailability("Yes");
     }
-
+}
 
 
 
