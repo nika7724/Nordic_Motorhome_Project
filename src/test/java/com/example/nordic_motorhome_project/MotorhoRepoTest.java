@@ -1,4 +1,4 @@
-/*package com.example.nordic_motorhome_project;
+package com.example.nordic_motorhome_project;
 
 import com.example.nordic_motorhome_project.model.Motorhome;
 import com.example.nordic_motorhome_project.repository.MotorhoRepo;
@@ -31,7 +31,7 @@ public class MotorhoRepoTest {
 
 
 
-
+/*
 @Test
     public void testFindMotorhoById() {
     Iterable<Motorhome> motorhomes = (Iterable<Motorhome>) motorhoRepo.findMotorhoById(1);
@@ -39,8 +39,8 @@ public class MotorhoRepoTest {
         for (Motorhome motorhome: motorhomes) {
             System.out.println(motorhome);
         }
-    }*/
-/*
+
+
     @Test
     public void testUpdateMortoho() {
         Integer motorhoId = 1;
