@@ -14,9 +14,32 @@
     <input type ="text" name="motorho_id" placeholder="Motorho_ID"><br>
     <input type ="date" name="start_date" placeholder="Start_date"><br>
     <input type ="date" name="end_date" placeholder="End_date"><br>
-    <input type ="text" name="season_id" placeholder="Season_ID"><br>
-    <input type ="text" name="location_id" placeholder="Location_ID"><br>
-    <input type ="text" name="item_id" placeholder="Item_ID"><br>
+    <select name="season_id">
+        <option value="" disabled selected hidden>Season_ID</option>
+        <option value="1">1. low_price:120</option>
+        <option value="2">2. middle_price:156</option>
+        <option value="3">3. peak_price:190</option>
+        <option value="4">4. low_price:140</option>
+        <option value="5">5. middle_price:182</option>
+        <option value="6">6. peak_price:224</option>
+        <option value="7">7. low_price:160</option>
+        <option value="8">8. middle_price:208</option>
+        <option value="9">9. peak_price:256</option>
+        <option value="10">10. low_price:180</option>
+        <option value="11">11. middle_price:234</option>
+        <option value="12">12. peak_price:288</option></select><br>
+    <select name="location_id">
+        <option value="" disabled selected hidden>Location</option>
+        <option value="1">1. NRM</option>
+        <option value="2">2. Airport</option>
+        <option value="3">3. FerryPort</option>
+    </select><br>
+    <select name="item_id">
+        <option value="" disabled selected hidden>Accessory</option>
+        <option value="1">1 pcs</option>
+        <option value="2">2 pcs</option>
+        <option value="3">3 pcs</option>
+    </select><br>
     <input type="submit" value="Register" style="margin-top:1%">
 
 

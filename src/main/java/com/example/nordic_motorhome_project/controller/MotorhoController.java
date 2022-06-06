@@ -55,6 +55,8 @@ public class MotorhoController {
         motorhoServices.updateMotorho(motorho.getMotorho_id(), motorho);
            return "redirect:/motorhome";
 }
+
+
   }
 
 
