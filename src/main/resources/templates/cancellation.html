@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cancellation</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div><h2>Additional cancellation fee.</h2></div>
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th>50 days prior</th>
+            <th>15-49 days prior</th>
+            <th>Less than 15 days prior</th>
+            <th>On the day of renting</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block>
+            <tr>
+                <td>20% extra or min.200€</td>
+                <td>50% extra</td>
+                <td>80% extra</td>
+                <td>95% extra</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+    <div class="container">
+        <div class="row">
+            <div>
+                <label>Rental price</label>
+                <input type="text" id="rentalPrice" class="form-control" name="rentalPrice">
+            </div>
+            <div>
+                <label>Prior days</label>
+                <input type="text" id="priorDays" class="form-control" name="priorDays">
+            </div>
+            <div>
+                <input href="/result" type="submit" value="submit" />
+            </div>
+            </form>
+        </div>
+</div>
+</div>
+</body>
+</html>
