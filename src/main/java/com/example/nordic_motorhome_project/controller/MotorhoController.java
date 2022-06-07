@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.webjars.NotFoundException;
 
 import java.util.List;
 
@@ -33,19 +34,19 @@ public class MotorhoController {
     }
 
     @GetMapping ("/viewMotorho/{id}")
-    public String viewMotorho(@PathVariable("id") int id, Model model) {
+    public String viewMotorho(@PathVariable("id") int id, Model model) throws NotFoundException {
         model.addAttribute("motorhome", motorhoServices.findMotorhoById(id));
         return "motorhome/viewMotorho";
     }
 
     @GetMapping("/deleteMotorho/{id}")
-    public String deleteMotorho(@PathVariable("id") int id) {
+    public String deleteMotorho(@PathVariable("id") int id)  throws NotFoundException{
         boolean deleteMotorho = motorhoServices.deleteMotorho(id);
         return "redirect:/motorhome";
     }
 
     @GetMapping("/editMotorho/{id}")
-    public String edit(@PathVariable("id") int id, Model model) {
+    public String edit(@PathVariable("id") int id, Model model) throws NotFoundException {
         model.addAttribute("motorhome", motorhoServices.findMotorhoById(id));
         return "motorhome/editMotorho";
     }

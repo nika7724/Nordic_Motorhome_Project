@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.webjars.NotFoundException;
 
 import java.util.List;
 
@@ -37,19 +38,19 @@ public class RentalController {
     }
 
     @GetMapping("/viewRental/{id}")
-    public String viewRental(@PathVariable("id") int id, Model model) {
+    public String viewRental(@PathVariable("id") int id, Model model) throws NotFoundException {
         model.addAttribute("rental", rentalServices.findRentalById(id));
         return "rental/viewRental";
     }
 
     @GetMapping("/deleteRental/{id}")
-    public String deleteRental(@PathVariable("id") int id) {
+    public String deleteRental(@PathVariable("id") int id) throws NotFoundException {
         boolean deleteRental = rentalServices.deleteRental(id);
         return "redirect:/rental";
     }
 
     @GetMapping("/editRental/{id}")
-    public String editR(@PathVariable("id") int id, Model model) {
+    public String editR(@PathVariable("id") int id, Model model) throws NotFoundException {
         model.addAttribute("rental", rentalServices.findRentalById(id));
         return "rental/editRental";
     }
@@ -61,7 +62,7 @@ public class RentalController {
     }
 
     @GetMapping("/chargeRental/{id}")
-    public String chargeR(@PathVariable("id") int id, Model model) {
+    public String chargeR(@PathVariable("id") int id, Model model) throws NotFoundException {
         model.addAttribute("rental", rentalServices.findRentalById(id));
         return "rental/chargeRental";
     }
