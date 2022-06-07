@@ -29,8 +29,8 @@ public class CustomerService {
     }
     public void delete(Integer id) throws CustomerNotFoundException {
         Long count = repo.countById(id);
-        if (count== null || count ==0) {
-            throw new CustomerNotFoundException("Could not find any customers with the ID: " + id);
+            if (count== null || count ==0) {
+                throw new CustomerNotFoundException("Could not find any customers with the ID: " + id);
         }
         repo.deleteById(id);
     }
