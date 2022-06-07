@@ -1,4 +1,4 @@
-/*package com.example.nordic_motorhome_project;
+package com.example.nordic_motorhome_project;
 
 import com.example.nordic_motorhome_project.model.Rental;
 import com.example.nordic_motorhome_project.repository.RentalRepo;
@@ -30,4 +30,4 @@ public class RentalRepoTest {
     rental.setItem_id(1);
     }
 
-}*/
+}
